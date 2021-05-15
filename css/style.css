@@ -1,4 +1,4 @@
-:root{
+:root {
     --color-primary: #2584ff;
     --color-secondary: #00d9ff;
     --color-accent: #ff3400;
@@ -6,51 +6,65 @@
     --color-body: #918ca4;
 }
 
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
 /* Typography */
-html{
+html {
     /*62.5% of 16px = 10px*/
     font-size: 62.5%;
 }
-body{
+
+body {
     font-family: Inter, Arial, Helvetica, sans-serif;
     color: var(--color-body);
     font-size: 2.4rem;
     line-height: 1.5;
 }
-h1, 
-h2, 
-h3{
+
+h1,
+h2,
+h3 {
     color: var(--color-headings);
     margin-bottom: 1rem;
 }
-h1{
+
+h1 {
     font-size: 7rem;
 }
-h2{
+
+h2 {
     font-size: 4rem;
 }
-h3{
+
+h3 {
     font-size: 3rem;
 }
-p{
+
+p {
     margin-top: 0;
 }
 
 @media screen and (min-width: 1024px) {
-    h1{
+    h1 {
         font-size: 8rem;
     }
-    h2{
+
+    h2 {
         font-size: 4rem;
     }
-    h3{
+
+    h3 {
         font-size: 2.4rem;
     }
 }
 
 
 /* Links */
-.link-arrow{
+.link-arrow {
     color: var(--color-accent);
     text-transform: uppercase;
     text-decoration: none;
@@ -58,24 +72,24 @@ p{
     font-weight: bold;
 }
 
-.link-arrow::after{
+.link-arrow::after {
     content: "-->";
     margin-left: 5px;
     transition: margin 0.15s;
 }
 
-.link-arrow:hover::after{
+.link-arrow:hover::after {
     margin-left: 10px;
 }
 
-@media  screen and (min-width: 1024px) {
-    .link-arrow{
+@media screen and (min-width: 1024px) {
+    .link-arrow {
         font-size: 1.5rem;
     }
 }
 
 /* Badges */
-.badge{
+.badge {
     border-radius: 20px;
     font-size: 2rem;
     font-weight: 600;
@@ -83,68 +97,69 @@ p{
     white-space: nowrap;
 }
 
-.badge--primary{
+.badge--primary {
     background: var(--color-primary);
     color: white;
 }
 
-.badge--secondary{
+.badge--secondary {
     background: var(--color-secondary);
     color: white;
 }
 
-.badge--small{
+.badge--small {
     font-size: 1.6rem;
 }
 
 @media screen and (min-width: 1024px) {
-    .badge{
+    .badge {
         font-size: 1.5rem;
     }
-    .badge--small{
+
+    .badge--small {
         font-size: 1.2rem;
     }
 }
 
 /* Lists */
-.list{
+.list {
     list-style: none;
     padding-left: 0;
     color: var(--color-headings);
 }
 
-.list--inline .list__item{
+.list--inline .list__item {
     display: inline-block;
     margin-right: 2rem;
 }
 
-.list--tick{
+.list--tick {
     list-style-image: url(../images/tick.svg);
     padding-left: 3rem;
 }
 
-.list--tick .list__item{
+.list--tick .list__item {
     padding-left: 0.5rem;
     padding-bottom: 1rem;
 }
 
 @media screen and (min-width: 1024px) {
-    .list--tick .list__item{
+    .list--tick .list__item {
         padding-left: 0;
     }
 }
 
-/* IKONS */
-.icon{
+/* ICONS */
+.icon {
     width: 40px;
     height: 40px;
 }
 
-.icon--primary{
+.icon--primary {
     fill: var(--color-primary);
 }
 
-.icon-container{
+.icon-container {
     background: #f3f9f8;
     width: 64px;
     height: 64px;
@@ -152,4 +167,62 @@ p{
     display: inline-flex;
     justify-content: center;
     align-items: center;
+}
+
+/* BUTTONS */
+.button {
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    white-space: normal;
+    padding: 2rem 3rem;
+    border-radius: 40px;
+    margin: 1rem 0;
+}
+
+.button--accent {
+    font-size: 1.5rem;
+    background: var(--color-accent);
+    color: white;
+}
+
+.button--accent:hover {
+    background: #f33302;
+}
+
+.button--secondary {
+    background: var(--color-secondary);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.button--secondary:hover {
+    background: #03c5e7;
+}
+
+.button--primary {
+    background: var(--color-headings);
+    color: white;
+}
+
+.button--primary:hover {
+    background: #388ffd;
+}
+
+.button--block {
+    width: 100%;
+    display: inline-block;
+}
+
+.button--outline {
+    background: white;
+    border: 2px solid var(--color-headings);
+    color: var(--color-headings);
+}
+
+@media screen and (min-width: 1024px) {
+    .button {
+        font-size: 1.5rem;
+    }
 }
