@@ -186,6 +186,10 @@ p {
     background: var(--color-accent);
 }
 
+.icon-container--white{
+    background: none;
+}
+
 /* BUTTONS */
 .button {
     border: none;
@@ -253,7 +257,6 @@ p {
     }
 }
 
-
 /* Inputs */
 .input{
     border-radius: var(--border-radius);
@@ -283,7 +286,6 @@ p {
     color: #cdcbd7;
 }
 
-
 @media screen and (min-width: 1024px){
     .input{
         font-size: 1.5rem;
@@ -301,10 +303,12 @@ p {
 .card__body{
     padding: 2rem 3rem;
 }
+
 .card--primary .card__header{
     background: var(--color-primary);
     color: white;
 }
+
 .card--secondary .card__header{
     background: var(--color-secondary);
     color: white;
@@ -313,6 +317,7 @@ p {
 .card--secondary .badge--secondary{
     background: #02cdf1;
 }
+
 /* Plans */
 .plan__name{
     color: white;
@@ -369,7 +374,6 @@ p {
     }
 }
 
-
 /* Media */
 .media {
     display: flex;
@@ -387,7 +391,6 @@ p {
     margin-top: 1rem;
 }
 
-
 /* Quote */
 .quote {
     font-size: 3rem;
@@ -399,6 +402,7 @@ p {
 .quote__text::before {
     content: open-quote;
 }
+
 .quote__text::after {
     content: close-quote;
 }
@@ -433,7 +437,6 @@ p {
     }
 }
 
-
 /* GRIDS */
 .grid {
     display: grid;
@@ -451,8 +454,6 @@ p {
     }
 }
 
-
-
 /* TESTIMONIAL */
 .testimonial{
     padding: 3rem;
@@ -462,9 +463,11 @@ p {
 .testimonial__image{
     position: relative;
 }
+
 .testimonial__image > img {
     width: 100%;
 }
+
 .testimonial__image > .icon-container {
     position: absolute;
     top: 3rem;
@@ -480,8 +483,6 @@ p {
         margin-left: 6rem;
     }
 }
-
-
 
 /* CALLOUT */
 .callout {
@@ -521,4 +522,36 @@ p {
         justify-self: start;
         margin: 0 2rem;
     }
+}
+
+/* COLLAPSIBLE */
+.collapsible__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.collapsible__heading {
+    margin-top: 0;
+    font-size: 3rem;
+}
+
+.collapsible__chevron {
+    transform: rotate(-90deg);
+    transition: all 0.3s;
+}
+
+.collapsible__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+    opacity: 0;
+}
+
+.collapsible--expanded .collapsible__chevron {
+    transform: rotate(0);
+}
+
+.collapsible--expanded .collapsible__content{
+    max-height: 100vh;
+    opacity: 1;
 }
